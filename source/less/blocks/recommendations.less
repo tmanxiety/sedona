@@ -1,0 +1,148 @@
+.recommendations {
+  order: -1;
+
+  .mobile-center();
+  padding: 24px 20px 10px;
+}
+
+.recommendations__list {
+  .reset-list();
+  padding-left: 50px;
+
+  text-align: left;
+}
+
+.recommendations__item {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -12px;
+    left: -50px;
+
+    width: 39px;
+    height: 37px;
+
+    background: url("../img/icon-house.svg") center no-repeat;
+    background-size: contain;
+  }
+
+  &--souvenirs::before {
+    left: -46px;
+
+    width: 32px;
+    height: 38px;
+
+    background: url("../img/icon-gift.svg") center no-repeat;
+    background-size: contain;
+  }
+
+  &--food::before {
+    top: -5px;
+
+    width: 40px;
+    height: 35px;
+
+    background: url("../img/icon-burger.svg") center no-repeat;
+    background-size: contain;
+  }
+}
+
+.recommendations__heading {
+  margin: 13px 0 15px;
+}
+
+.recommendations__text {
+  .reset-indents();
+  margin-bottom: 28px;
+
+  line-height: 21px;
+}
+
+.recommendations__text--transform {
+  br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .recommendations {
+    .tablet-center();
+    padding: 0;
+  }
+
+  .recommendations__list {
+    display: flex;
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .recommendations__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px 45px 32px;
+    width: 256px;
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &::before {
+      position: static;
+    }
+
+    &--booking::before {
+      width: 75px;
+      height: 75px;
+    }
+
+    &--food::before {
+      width: 77px;
+      height: 75px;
+    }
+
+    &--souvenirs::before {
+      width: 64px;
+      height: 75px;
+    }
+  }
+
+  .recommendations__heading {
+    margin-top: 26px;
+    margin-bottom: 20px;
+
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .recommendations__text {
+    width: 166px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .recommendations {
+    .desktop-center();
+  }
+
+  .recommendations__item {
+    width: 400px;
+    padding-bottom: 54px;
+  }
+
+  .recommendations__text {
+    width: 290px;
+  }
+
+  .recommendations__text--transform {
+    br {
+      display: block;
+    }
+  }
+}

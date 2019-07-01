@@ -1,0 +1,24 @@
+.section-title {
+  .reset-indents();
+  .mobile-center();
+  padding: 0 20px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: @heading-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .section-title {
+    .tablet-center();
+    width: 500px;
+
+    font-size: 21px;
+
+    br {
+      display: none;
+    }
+  }
+}

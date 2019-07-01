@@ -1,0 +1,48 @@
+.booking {
+  .mobile-center();
+  padding: 28px 20px 48px;
+}
+
+.booking__trigger {
+  font-size: 21px;
+  line-height: 26px;
+  color: @heading-dark;
+}
+
+.booking__lead {
+  margin: 18px 0 35px;
+
+  br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .booking {
+    margin: 0 auto;
+    padding: 54px 0 56px;
+    width: 458px;
+  }
+
+  .booking__trigger {
+    font-size: 30px;
+  }
+
+  .booking__lead {
+    margin: 26px 0 42px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .booking {
+    padding-bottom: 66px;
+  }
+
+  .booking__lead {
+    margin-bottom: 46px;
+  }
+}

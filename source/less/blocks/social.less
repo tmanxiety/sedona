@@ -1,0 +1,121 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .mobile-center();
+  padding: 0 20px;
+}
+
+.social__tag {
+  margin-bottom: 35px;
+  margin-left: -13px;
+  font-size: 21px;
+  line-height: 26px;
+  color: @heading-dark;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 153px;
+
+  .reset-list();
+}
+
+.social__item {
+  position: relative;
+
+  width: 47px;
+  height: 48px;
+
+  background-color: @bg-blue;
+
+  a {
+    display: inline-block;
+    width: 47px;
+    height: 48px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 18px;
+    height: 14px;
+
+    background: url("../img/icon-twitter.svg") center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  &--fb::before {
+    width: 9px;
+    height: 18px;
+
+    background-image: url("../img/icon-facebook.svg");
+    cursor: pointer;
+  }
+
+  &--youtube::before {
+    width: 20px;
+    height: 14px;
+
+    background-image: url("../img/icon-youtube.svg");
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @bg-blue-hover;
+  }
+
+  &:focus {
+    border: 1px solid yellow;
+  }
+
+  &:active {
+    background-color: @bg-blue-active;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    flex-direction: row;
+
+    width: 452px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .social__list {
+    margin-right: 53px;
+  }
+
+  .social__tag {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    width: 545px;
+    margin-left: 132px;
+  }
+
+  .social__list {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

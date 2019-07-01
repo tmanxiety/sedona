@@ -1,0 +1,170 @@
+.player {
+  position: relative;
+}
+
+.player__screen {
+  margin: 0 auto;
+
+  width: 320px;
+  height: 200px;
+
+  background: url("../img/video-mobile@1x.jpg") center no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+}
+
+.player__controls {
+  display: flex;
+  justify-content: space-between;
+
+  width: 280px;
+  padding: 23px;
+  padding-left: 21px;
+  margin: 0 auto;
+
+  background-color: @bg-form;
+}
+
+.player__substrate {
+  position: absolute;
+  top: 155px;
+  left: 20px;
+
+  width: 280px;
+  height: 45px;
+
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.player__progress-bar {
+  position: relative;
+}
+
+.player__scale {
+  width: 234px;
+  height: 3px;
+
+  background-color: #ffffff;
+  opacity: 0.2;
+}
+
+.player__progress-toggle {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 9px;
+  height: 9px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.player__btn {
+  height: 20px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  svg {
+    fill: #5c6870;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: #333333;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: @mobile-only) {
+  .player__progress-bar {
+    position: absolute;
+    bottom: 86px;
+  }
+
+  .player__btn--cc {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .player__screen {
+    width: 648px;
+    height: 500px;
+
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  .player__substrate {
+    top: 407px;
+    left: 60px;
+
+    width: 648px;
+    height: 93px;
+  }
+
+  .player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+
+    align-items: center;
+
+    width: 648px;
+    padding: 30px 40px 38px 30px;
+
+    background-color: transparent;
+  }
+
+  .player__btn {
+    svg {
+      fill: #ffffff;
+    }
+  }
+
+  .player__scale {
+    width: 390px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .player__screen {
+    width: 800px;
+
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+
+  .player__controls,
+  .player__substrate {
+    left: 200px;
+
+    width: 800px;
+  }
+
+  .player__scale {
+    width: 540px;
+  }
+}

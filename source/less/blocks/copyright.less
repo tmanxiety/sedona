@@ -1,0 +1,33 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__logo {
+  display: block;
+  height: 34px;
+  .reset-indents();
+  padding-right: 76px;
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: @bg-blue;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.copyright__text {
+  .reset-indents();
+  margin-right: 9px;
+
+  font-size: 14px;
+  line-height: 26px;
+  color: @heading-dark;
+}

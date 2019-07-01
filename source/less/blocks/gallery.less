@@ -1,0 +1,46 @@
+.gallery__list {
+  .reset-list();
+}
+
+.gallery__item {
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    .tablet-center();
+    padding: 0 60px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    width: 324px;
+
+    &:first-child {
+      width: 648px;
+
+      img {
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery {
+    .desktop-center();
+    padding: 0;
+  }
+
+  .gallery__item {
+    width: 400px;
+
+    &:first-child {
+      width: 1200px;
+    }
+  }
+}
