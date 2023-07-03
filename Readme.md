@@ -1,6 +1,6 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Артем Веселов](https://up.htmlacademy.ru/adaptive/14/user/614383).
+* Студент: [Артемий Веселов](https://up.htmlacademy.ru/adaptive/14/user/614383).
 * Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
